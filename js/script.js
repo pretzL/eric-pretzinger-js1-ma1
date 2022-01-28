@@ -22,6 +22,8 @@ const cat = {
   },
 };
 
+cat.complain();
+
 /* Question 2:
 Select the h3 from the HTML using the querySelector method and assign it to a variable called heading.
 Change its innerHTML value to "Updated heading". */
