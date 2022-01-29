@@ -90,6 +90,31 @@ function createCats(cats) {
     }
 
     html += `<div>
+    <h5>${cats[i].name}</h5>
+    <p>${catsAge}</p>
+    </div>`;
+  }
+  return html;
+}
+
+const catContainer = document.querySelector(".cat-container");
+const updatedHtml = createCats(cats);
+
+catContainer.innerHTML = updatedHtml;
+
+/* Alternate Solution
+
+function createCats(cats) {
+  let html = "";
+
+  for (let i = 0; i < cats.length; i++) {
+    let catsAge = "Age unknown";
+
+    if (cats[i].age) {
+      catsAge = cats[i].age;
+    }
+
+    html += `<div>
     <h5>${cats[i].name}</h4>
     <p>Age: ${catsAge}</p>
     </div>`;
@@ -99,4 +124,4 @@ function createCats(cats) {
   }
 }
 
-createCats(cats);
+createCats(cats); */
